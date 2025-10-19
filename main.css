@@ -423,6 +423,7 @@ footer {
         text-align: center;
         padding: 15px;
         gap: 10px;
+        align-items: center;
     }
 
     .text-content h3 {
@@ -604,3 +605,4 @@ footer {
         padding: 12px;
     }
 }
+
