@@ -285,12 +285,15 @@ header {
     text-align: center;
     width: 100%;
     margin-top: auto;
+    border: 1px solid rgb(246, 188, 252);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3);
 }
 
 .day-link:hover {
     background: #9d67e3;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-color: white;
 }
 
 .locked {
@@ -605,4 +608,5 @@ footer {
         padding: 12px;
     }
 }
+
 
