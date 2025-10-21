@@ -777,13 +777,20 @@ footer {
     
     .day-link,
     .video-main-btn {
-        padding: 8px 12px;
-        font-size: 0.85rem;
-        min-height: 36px;
+        padding: 14px 20px;
+        font-size: 0.95rem;
+        min-height: 52px;
+        border-radius: 12px;
+        font-weight: 600;
     }
     
     .video-main-btn {
-        padding-right: 28px;
+        padding-right: 45px;
+    }
+
+    .video-main-btn::after {
+        right: 16px;
+        font-size: 0.9em;
     }
     
     .social-link {
@@ -802,6 +809,13 @@ footer {
 }
 
 @media (max-width: 360px) {
+    .day-link,
+    .video-main-btn {
+        padding: 16px 20px;
+        min-height: 56px;
+        font-size: 1rem;
+    }
+
     .logo {
         font-size: 1.6rem;
     }
