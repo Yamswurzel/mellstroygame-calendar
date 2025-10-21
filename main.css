@@ -733,11 +733,11 @@ footer {
     
     .calendar-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        gap: 8px;
     }
     
     .day-box {
-        min-height: 180px;
+        min-height: 200px;
         padding: 12px 8px;
     }
     
@@ -754,8 +754,9 @@ footer {
     }
     
     .day-text {
-        font-size: 0.8rem;
-        max-height: 48px;
+        font-size: 0.7rem;
+        line-height: 1.2;
+        max-height: 3.2em;
     }
     
     .prize-card h3 {
@@ -777,20 +778,13 @@ footer {
     
     .day-link,
     .video-main-btn {
-        padding: 14px 20px;
-        font-size: 0.95rem;
-        min-height: 52px;
-        border-radius: 12px;
-        font-weight: 600;
+        padding: 8px 12px;
+        font-size: 0.85rem;
+        min-height: 36px;
     }
     
     .video-main-btn {
-        padding-right: 45px;
-    }
-
-    .video-main-btn::after {
-        right: 16px;
-        font-size: 0.9em;
+        padding-right: 28px;
     }
     
     .social-link {
@@ -809,13 +803,6 @@ footer {
 }
 
 @media (max-width: 360px) {
-    .day-link,
-    .video-main-btn {
-        padding: 16px 20px;
-        min-height: 56px;
-        font-size: 1rem;
-    }
-
     .logo {
         font-size: 1.6rem;
     }
