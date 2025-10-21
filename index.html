@@ -49,7 +49,7 @@
                         <img src="photo/win1.png" alt="Победитель дня 1" class="day-image">
                     </div>
                     <div class="text-container">
-                        <p class="day-text">@tele_stoy стал победителем в первый день!</p>
+                        <p class="day-text">@tele_stoy - автор самого залайкнутого комментария под конкурсом!</p>
                         <a href="https://www.tiktok.com/@glavstroy/video/7562259105235127608?_t=ZS-90eyeIZrPDl&_r=1" target="_blank" class="day-link">Смотреть видео</a>
                     </div>
                 </div>
@@ -61,12 +61,12 @@
                         <img src="photo/win2.png" alt="Победитель дня 2" class="day-image">
                     </div>
                     <div class="text-container">
-                        <p class="day-text">@dashaiyulskaya стала победителем во второй день!</p>
+                        <p class="day-text">@dashaiyulskaya стала победителем во второй день, нарисовав MELLSTROY!</p>
                         <a href="https://www.tiktok.com/@dashaiyulskaya/video/7562516091512098068?_t=ZM-90fCUm9N8Ae&_r=1" target="_blank" class="day-link">Смотреть видео</a>
                     </div>
                 </div>
             </div>
-            
+
             <div class="day-box open">
                 <div class="day-content">
                     <div class="image-container">
@@ -74,13 +74,36 @@
                     </div>
                     <div class="text-container">
                         <p class="day-text">@mike_222 и @omgdnss стали победителями в третий день!</p>
-                        <a href="https://www.tiktok.com/@mike_222/video/7562811486138141983?_t=ZT-90hC1IpuBh8&_r=1" target="_blank" class="day-link">Смотреть видео</a>
-                        <a href="https://www.tiktok.com/@omgdnss/video/7562949214968319288?_t=ZT-90hCS6cDrGX&_r=1" target="_blank" class="day-link">Смотреть видео</a>
+                        <div class="video-dropdown">
+                            <button class="video-main-btn">Смотреть видео</button>
+                            <div class="video-dropdown-menu">
+                                <a href="https://www.tiktok.com/@mike_222/video/7562811486138141983?_t=ZT-90hC1IpuBh8&_r=1" target="_blank" class="video-dropdown-item">Видео @mike_222</a>
+                                <a href="https://www.tiktok.com/@omgdnss/video/7562949214968319288?_t=ZT-90hCS6cDrGX&_r=1" target="_blank" class="video-dropdown-item">Видео @omgdnss</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="day-box locked"><div class="day-number">4</div></div>
+
+            <div class="day-box open">
+               <div class="day-content">
+                    <div class="image-container">
+                        <img src="photo/win4.png" alt="Победители дня 4" class="day-image">
+                    </div>
+                    <div class="text-container">
+                        <p class="day-text">@serg_sinitsky, @mer1tys и @zhdonets победители четвертого дня!</p>
+                        <div class="video-dropdown">
+                            <button class="video-main-btn">Смотреть видео</button>
+                            <div class="video-dropdown-menu">
+                                <a href="https://www.tiktok.com/@serg_sinitsky/video/7563211991528049928?_t=ZT-90isv4kMO3j&_r=1" target="_blank" class="video-dropdown-item">Видео @serg_sinitsky</a>
+                                <a href="https://www.tiktok.com/@mer1tys/video/7563186174349659422?_t=ZT-90irl00Vviv&_r=1" target="_blank" class="video-dropdown-item">Видео @mer1tys</a>
+                                <a href="https://www.tiktok.com/@zhdonets/video/7563295375789002017?_t=ZT-90irtqlfwVx&_r=1" target="_blank" class="video-dropdown-item">Видео @zhdonets</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="day-box locked"><div class="day-number">5</div></div>
             <div class="day-box locked"><div class="day-number">6</div></div>
             <div class="day-box locked"><div class="day-number">7</div></div>
@@ -130,6 +153,33 @@
             <p>Mellstroy Game 2025 - 30 дней = 30 квартир</p>
         </footer>
     </div>
-</body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const videoDropdowns = document.querySelectorAll('.video-dropdown');
+            
+            videoDropdowns.forEach(dropdown => {
+                const button = dropdown.querySelector('.video-main-btn');
+                
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                });
+            });
 
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.video-dropdown')) {
+                    videoDropdowns.forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                }
+            });
+            
+            document.querySelectorAll('.video-dropdown-item').forEach(link => {
+                link.addEventListener('click', function() {
+                    this.closest('.video-dropdown').classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
 </html>
