@@ -155,6 +155,20 @@
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            function createUsernameLinks() {
+                const dayTexts = document.querySelectorAll('.day-text');
+                
+                dayTexts.forEach(textElement => {
+                    let html = textElement.innerHTML;
+
+                    html = html.replace(/@(\w+)/g, '<a href="https://www.tiktok.com/@$1" target="_blank" class="username-link">@$1</a>');
+                    
+                    textElement.innerHTML = html;
+                });
+            }
+            
+            createUsernameLinks();
+
             const videoDropdowns = document.querySelectorAll('.video-dropdown');
             
             videoDropdowns.forEach(dropdown => {
@@ -183,4 +197,3 @@
     </script>
 </body>
 </html>
-
