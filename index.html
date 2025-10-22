@@ -104,7 +104,25 @@
                 </div>
             </div>
 
-            <div class="day-box locked"><div class="day-number">5</div></div>
+            <div class="day-box open">
+                <div class="day-content">
+                    <div class="image-container">
+                        <img src="photo/win5.png" alt="Победители дня 5" class="day-image">
+                    </div>
+                    <div class="text-container">
+                        <p class="day-text">@happyhous, @maximka.333 и @danatkach3 победители пятого дня!</p>
+                        <div class="video-dropdown">
+                            <button class="video-main-btn">Смотреть видео</button>
+                            <div class="video-dropdown-menu">
+                                <a href="https://www.tiktok.com/@happyhous/video/7563569216587173143?_t=ZT-90kgmov0xFl&_r=1" target="_blank" class="video-dropdown-item">@happyhous</a>
+                                <a href="https://www.tiktok.com/@maximka.333/video/7563413522978196757?_t=ZT-90kgoJlXbIL&_r=1" target="_blank" class="video-dropdown-item">@maximka.333</a>
+                                <a href="https://www.tiktok.com/@danatkach3/video/7563588773385211143?_t=ZT-90kgsVvCK7x&_r=1" target="_blank" class="video-dropdown-item">@danatkach3</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="day-box locked"><div class="day-number">6</div></div>
             <div class="day-box locked"><div class="day-number">7</div></div>
             <div class="day-box locked"><div class="day-number">8</div></div>
@@ -161,7 +179,7 @@
                 dayTexts.forEach(textElement => {
                     let html = textElement.innerHTML;
 
-                    html = html.replace(/@(\w+)/g, '<a href="https://www.tiktok.com/@$1" target="_blank" class="username-link">@$1</a>');
+                    html = html.replace(/@([\w\.\d]+)/g, '<a href="https://www.tiktok.com/@$1" target="_blank" class="username-link">@$1</a>');
                     
                     textElement.innerHTML = html;
                 });
